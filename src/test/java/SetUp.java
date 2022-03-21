@@ -5,7 +5,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class SetUp {
+
     public WebDriver driver;
 
     @BeforeAll
@@ -23,4 +27,14 @@ public class SetUp {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
+
+    public void Test(String websiteAddress, String expectedTitle) {
+        driver.get(websiteAddress);
+        driver.manage().window().maximize();
+        String actualTitle = driver.getTitle();
+        assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
+//        driver.switchTo().newWindow(WindowType.TAB);
+    }
 }
+
+

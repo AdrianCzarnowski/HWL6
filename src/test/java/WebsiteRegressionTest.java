@@ -2,9 +2,6 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class WebsiteRegressionTest extends SetUp {
 
@@ -21,10 +18,8 @@ public class WebsiteRegressionTest extends SetUp {
             "https://siiportal.sii.pl/, Logowanie na koncie",
     })
     public void regressionTestOnet(String websiteAddress, String expectedTitle) {
-        driver.get(websiteAddress);
-        driver.manage().window().maximize();
-        String actualTitle = driver.getTitle();
-        assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
+        Test(websiteAddress, expectedTitle);
+
     }
 
     @Tag("Regression")
@@ -40,10 +35,7 @@ public class WebsiteRegressionTest extends SetUp {
             "https://siiportal.sii.pl/, Logowanie na koncie",
     })
     public void regressionTestKotuszkowo(String websiteAddress, String expectedTitle) {
-        driver.get(websiteAddress);
-        driver.manage().window().maximize();
-        String actualTitle = driver.getTitle();
-        assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
+        Test(websiteAddress, expectedTitle);
     }
 
     @Tag("Regression")
@@ -59,10 +51,7 @@ public class WebsiteRegressionTest extends SetUp {
             "https://siiportal.sii.pl/, Logowanie na koncie",
     })
     public void regressionTestFilmweb(String websiteAddress, String expectedTitle) {
-        driver.get(websiteAddress);
-        driver.manage().window().maximize();
-        String actualTitle = driver.getTitle();
-        assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
+        Test(websiteAddress, expectedTitle);
     }
 
     @Tag("Regression")
@@ -78,10 +67,7 @@ public class WebsiteRegressionTest extends SetUp {
             "https://siiportal.sii.pl/, Logowanie na koncie",
     })
     public void regressionTestSelenium(String websiteAddress, String expectedTitle) {
-        driver.get(websiteAddress);
-        driver.manage().window().maximize();
-        String actualTitle = driver.getTitle();
-        assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
+        Test(websiteAddress, expectedTitle);
     }
 
     @Tag("Regression")
@@ -97,10 +83,7 @@ public class WebsiteRegressionTest extends SetUp {
             "https://www.onet.pl/, Onet – Jesteś na bieżąco",
     })
     public void regressionTestSii(String websiteAddress, String expectedTitle) {
-        driver.get(websiteAddress);
-        driver.manage().window().maximize();
-        String actualTitle = driver.getTitle();
-        assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
+        Test(websiteAddress, expectedTitle);
     }
 }
 
