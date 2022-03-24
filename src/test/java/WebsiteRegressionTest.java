@@ -3,12 +3,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
-public class WebsiteRegressionTest extends SetUp {
+public class WebsiteRegressionTest extends BasePage {
 
     @Tag("Regression")
     @ParameterizedTest(name = "{0}")
     @CsvSource({
-            "https://www.onet.pl/, Onet – Jesteś na bieżąco",
+//            "https://www.onet.pl/, Onet – Jesteś na bieżąco",
             "http://kotuszkowo.pl/, Kotuszkowo- blog o kotach",
             "https://www.filmweb.pl/, Filmweb - filmy takie jak Ty!",
             "https://www.selenium.dev/documentation/en/webdriver/, WebDriver | Selenium",

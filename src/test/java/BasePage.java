@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SetUp {
+public class BasePage {
 
     public WebDriver driver;
 
