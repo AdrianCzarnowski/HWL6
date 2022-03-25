@@ -18,6 +18,8 @@ Do v1.1 dodano :
 - testy wywoływany z jednej linii kodu w klasie testowej
 - logger slf4j
 - appender do wysyłania maily, na chwile obecną zakomentowany
+- dependency potrzebne do maila
 - kolor do threada
 - kolory do tekstu logów
 - wyróżnienie logów, które są związane bezpośrednio z testem poprzez linię  "♛" na starcie i końcu logów testu jednostkowego
+
