@@ -61,9 +61,9 @@
         </encoder>
     </appender>
 
-    <logger name="base">
-        <appender-ref ref="FILE"/>
-    </logger>
+<!--    <logger name="base" level="debug">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--    </logger>-->
 
     <root level="info">
         <appender-ref ref="STDOUT"/>
