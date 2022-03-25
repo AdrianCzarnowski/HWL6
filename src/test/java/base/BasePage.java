@@ -13,7 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class BasePage {
-    private static Logger logger = LoggerFactory.getLogger("BasePage.class");
+    private static Logger log = LoggerFactory.getLogger("BasePage.class");
 
     public WebDriver driver;
     public static final String PURPLE = "\u001B[35m";
@@ -24,9 +24,9 @@ public class BasePage {
     @BeforeAll
     static void beforeAll() {
         WebDriverManager.chromedriver().setup();
-        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
-        logger.info("<<<<<Driver initiated properly");
-        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
+        log.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
+        log.info("<<<<<Driver initiated properly");
+        log.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
     }
 
     @BeforeEach
@@ -38,19 +38,19 @@ public class BasePage {
     @AfterEach
     void tearsDown() {
         driver.manage().deleteAllCookies();
-        logger.info("<<<<<Driver deleted cookies properly");
+        log.info("<<<<<Driver deleted cookies properly");
         driver.quit();
-        logger.info("<<<<<Driver closed properly");
-        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
+        log.info("<<<<<Driver closed properly");
+        log.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
     }
 
     public void Test(String websiteAddress, String expectedTitle) {
         driver.get(websiteAddress);
-        logger.info("<<<<<Driver get correct website address");
+        log.info("<<<<<Driver get correct website address");
         String actualTitle = driver.getTitle();
-        logger.info(PURPLE + "<<<<<Driver get actual website title : " + COLOR_RESET + actualTitle);
+        log.info(PURPLE + "<<<<<Driver get actual website title : " + COLOR_RESET + actualTitle);
         assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
-        logger.info("<<<<<expected title is equal than actual title");
+        log.info("<<<<<expected title is equal than actual title");
     }
 }
 

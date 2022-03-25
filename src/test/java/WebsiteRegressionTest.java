@@ -9,16 +9,16 @@ import org.slf4j.LoggerFactory;
 
 public class WebsiteRegressionTest extends BasePage {
 
-    private static Logger logger = LoggerFactory.getLogger("WebsiteRegressionTest.class");
+    private static Logger log = LoggerFactory.getLogger("WebsiteRegressionTest.class");
 
     @Tag("Regression")
     @ParameterizedTest(name = "{0}")
     @CsvFileSource(resources = "/convertcsv.csv")
     @DisplayName("Website title regression test")
     void TestRegression(String websiteAddress, String expectedTitle) {
-        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
-        logger.info(PURPLE + "<<<<<App url: " + websiteAddress);
-        logger.info(PURPLE + "<<<<<Expected tittle: " + COLOR_RESET + expectedTitle);
+        log.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
+        log.info(PURPLE + "<<<<<App url: " + websiteAddress);
+        log.info(PURPLE + "<<<<<Expected tittle: " + COLOR_RESET + expectedTitle);
         Test(websiteAddress, expectedTitle);
     }
 }
