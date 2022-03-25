@@ -1,7 +1,9 @@
 <configuration scan="true">
     <property name="DEV_HOME" value="${user.dir}/log"/>
     <property name="FILE_NAME" value="WebsiteRegressionTestLog"/>
+
     <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
@@ -51,7 +53,6 @@
     <!--    </turboFilter>-->
 
 
-
     <appender name="HTML" class="ch.qos.logback.core.FileAppender">
         <file>log.html</file>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
@@ -61,9 +62,9 @@
         </encoder>
     </appender>
 
-<!--    <logger name="base" level="debug">-->
-<!--        <appender-ref ref="FILE"/>-->
-<!--    </logger>-->
+    <!--    <logger name="base" level="debug">-->
+    <!--        <appender-ref ref="FILE"/>-->
+    <!--    </logger>-->
 
     <root level="info">
         <appender-ref ref="STDOUT"/>
