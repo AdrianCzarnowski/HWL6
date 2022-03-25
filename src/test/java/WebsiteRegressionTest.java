@@ -20,7 +20,6 @@ public class WebsiteRegressionTest extends BasePage {
         logger.info(PURPLE + "<<<<<App url: " + websiteAddress);
         logger.info(PURPLE + "<<<<<Expected tittle: " + COLOR_RESET + expectedTitle);
         Test(websiteAddress, expectedTitle);
-
     }
 }
 

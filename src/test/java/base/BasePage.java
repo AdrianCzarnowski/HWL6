@@ -24,9 +24,9 @@ public class BasePage {
     @BeforeAll
     static void beforeAll() {
         WebDriverManager.chromedriver().setup();
-        logger.info(BLACK +WHITE_BACKGROUND+"♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛"+COLOR_RESET);
+        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
         logger.info("<<<<<Driver initiated properly");
-        logger.info(BLACK +WHITE_BACKGROUND+"♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛"+COLOR_RESET);
+        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
     }
 
     @BeforeEach
@@ -41,14 +41,14 @@ public class BasePage {
         logger.info("<<<<<Driver deleted cookies properly");
         driver.quit();
         logger.info("<<<<<Driver closed properly");
-        logger.info(BLACK +WHITE_BACKGROUND+"♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛"+COLOR_RESET);
+        logger.info(BLACK + WHITE_BACKGROUND + "♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛" + COLOR_RESET);
     }
 
     public void Test(String websiteAddress, String expectedTitle) {
         driver.get(websiteAddress);
         logger.info("<<<<<Driver get correct website address");
         String actualTitle = driver.getTitle();
-        logger.info(PURPLE+"<<<<<Driver get actual website title : "+COLOR_RESET + actualTitle);
+        logger.info(PURPLE + "<<<<<Driver get actual website title : " + COLOR_RESET + actualTitle);
         assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
         logger.info("<<<<<expected title is equal than actual title");
     }
