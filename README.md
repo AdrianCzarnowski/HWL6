@@ -13,7 +13,7 @@
 Testy są sparametryzowane (parametrem jest tytuł strony). Każdy test z tagiem "regresja" oraz dodatkowym tagiem odpowiadającym nazwie strony.
 
 
-v1.1 zawiera nowe rozwiązania : 
+# v1.1 zawiera nowe rozwiązania : 
 - plik csv jako source
 - testy wywoływany z jednej linii kodu w klasie testowej
 - logger slf4j
