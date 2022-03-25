@@ -1,4 +1,4 @@
-# Każdy test wchodzi na 5 różnych stron www i sprawdza ich tytuł. Strony:
+# Test wchodzi na 5 różnych stron www i sprawdza ich tytuł. 
 
 *sii portal
 
