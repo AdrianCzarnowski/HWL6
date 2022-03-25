@@ -48,7 +48,7 @@ public class BasePage {
         driver.get(websiteAddress);
         logger.info("<<<<<Driver get correct website address");
         String actualTitle = driver.getTitle();
-        logger.info("<<<<<Driver get actual website title : " + actualTitle);
+        logger.info(PURPLE+"<<<<<Driver get actual website title : "+COLOR_RESET + actualTitle);
         assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
         logger.info("<<<<<expected title is equal than actual title");
     }
