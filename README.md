@@ -22,5 +22,5 @@ Do v1.1 dodano :
 - kolor do threada
 - kolory do logów
 - wyróżnienie logów, które są związane bezpośrednio z testem poprzez linię  "♛" na starcie i końcu logów testu jednostkowego w konsoli
-- appender HTML do wyświetlania logów w przeglądarce
+- appender HTML do wyświetlania logów w przeglądarce (kolory i znaki szczególne nie są obsługiwane, przez co czytelność jest mniejsza niż w konsoli)
 
