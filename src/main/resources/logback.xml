@@ -71,7 +71,7 @@
         <!--        <appender-ref ref="EMAIL" />-->
     </root>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="FILE"/>
     </root>
 
