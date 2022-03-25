@@ -30,15 +30,18 @@ public class BasePage {
     @AfterEach
     void tearsDown() {
         driver.manage().deleteAllCookies();
+        logger.info("<<<<<Driver deleted cookies properly");
         driver.quit();
         logger.info("<<<<<Driver closed properly");
     }
 
     public void Test(String websiteAddress, String expectedTitle) {
         driver.get(websiteAddress);
+        logger.info("<<<<<Driver get correct website address");
         String actualTitle = driver.getTitle();
+        logger.info("<<<<<Driver get correct website title");
         assertThat("Title is not correct", actualTitle, equalTo(expectedTitle));
-//        driver.switchTo().newWindow(WindowType.TAB);
+        logger.info("<<<<<expected title is equal than actual title");
     }
 }
 
