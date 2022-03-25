@@ -25,3 +25,13 @@ Testy są sparametryzowane (parametrem jest tytuł strony). Każdy test z tagiem
 - wyróżnienie logów, które są związane bezpośrednio z testem poprzez linię  "♛" na starcie i końcu logów testu jednostkowego w konsoli
 - appender HTML do wyświetlania logów w przeglądarce (kolory i znaki szczególne nie są obsługiwane, przez co czytelność jest mniejsza niż w konsoli)
 
+
+2022-03-25 15:28:22 [main] INFO  -  ♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛
+2022-03-25 15:28:22 [main] INFO  -  <<<<<App url: http://kotuszkowo.pl/
+2022-03-25 15:28:22 [main] INFO  -  <<<<<Expected tittle: Kotuszkowo- blog o kotach
+2022-03-25 15:28:27 [main] INFO  -  <<<<<Driver get correct website address
+2022-03-25 15:28:27 [main] INFO  -  <<<<<Driver get actual website title : Kotuszkowo- blog o kotach
+2022-03-25 15:28:27 [main] INFO  -  <<<<<expected title is equal than actual title
+2022-03-25 15:28:27 [main] INFO  -  <<<<<Driver deleted cookies properly
+2022-03-25 15:28:28 [main] INFO  -  <<<<<Driver closed properly
+2022-03-25 15:28:28 [main] INFO  -  ♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛♛
